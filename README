@@ -1,0 +1,23 @@
+Goto web folder -
+
+npm install
+bower install
+
+-- Then please run gulp and it takes care of the system.
+
+1. MySQL for Database.
+2. Python as Backend Programming Language.
+3. Python Flask and Flask-RestFul for Services.
+5. Logging and Kaptan - How?
+
+6. HTML and Bootstrap. (Learn)
+7. Handlebars for Templating.
+8. JQuery for Events.
+
+9. SASS for CSS Style Sheets. (Not yet someone helping you with the project) 
+
+
+10. Gulp as Build Tool.
+11. Browser Sync and Watch for - Easier Testing and publishing changes.
+12. Bower - Installing Dependencies of the Front End.
+13. NPM - Installng Dependencies required for Building the Application.

@@ -1,0 +1,5 @@
+Flask == 0.10.1
+Flask_Inputs == 0.2.0
+Flask_RESTful == 0.3.4
+jsonschema == 2.5.1
+kaptan == 0.5.8

@@ -1,0 +1,11 @@
+{
+    "environment": "dev",
+    "debug": true,
+    "dbhost": "localhost",
+    "dbname":"storeAssist",
+    "dbuser":"root",
+    "dbpass":"root",
+    "logfile": "storeassist.log",
+    "logtime": "midnight",
+    "host" : "0.0.0.0",
+}
