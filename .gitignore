@@ -1,0 +1,6 @@
+services/*.pyc
+services/routes/*.pyc
+services/storeAssist.log
+services/storeAssist-*.log
+services/storeAssist-timed.log
+services/storeAssist-timed-*.log

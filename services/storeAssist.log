@@ -1,1 +1,213 @@
 2016-09-12 01:51:48,907 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 01:51:48] "POST /api/auth/login HTTP/1.1" 400 -
+2016-09-12 12:42:25,292 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 12:42:25] "POST /api/auth/login HTTP/1.1" 400 -
+2016-09-12 12:44:37,347 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 12:48:26,539 - UserRole get - INFO - Entered into UserRole get method
+2016-09-12 12:48:26,539 - UserRole get - ERROR - DB Connection error
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 163, in get
+    cursor = g.appdb2.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb2'
+2016-09-12 12:48:26,658 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 12:48:26] "GET /api/auth/addUser?store_id=36104 HTTP/1.1" 500 -
+2016-09-12 12:54:28,158 - UserRole get - INFO - Entered into UserRole get method
+2016-09-12 12:54:28,158 - UserRole get - ERROR - DB Connection error
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 163, in get
+    cursor = g.appdb2.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb2'
+2016-09-12 12:54:28,176 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 12:54:28] "GET /api/auth/addUser?store_id=36104 HTTP/1.1" 500 -
+2016-09-12 13:12:05,125 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/app.py', reloading
+2016-09-12 13:16:14,125 - UserRole get - INFO - Entered into UserRole get method
+2016-09-12 13:16:14,125 - UserRole get - ERROR - DB Connection error
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 163, in get
+    cursor = g.db.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'db'
+2016-09-12 13:16:14,138 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 13:16:14] "GET /api/auth/addUser?store_id=36104 HTTP/1.1" 500 -
+2016-09-12 13:33:35,618 - UserRole get - INFO - Entered into UserRole get method
+2016-09-12 13:33:35,618 - UserRole get - ERROR - DB Connection error
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 163, in get
+    cursor = g.appdb.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb'
+2016-09-12 13:33:35,638 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 13:33:35] "GET /api/auth/addUser?store_id=36104 HTTP/1.1" 500 -
+2016-09-12 13:39:11,100 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/app.py', reloading
+2016-09-12 14:55:58,490 - UserRole get - INFO - Entered into UserRole get method
+2016-09-12 14:55:58,490 - UserRole get - ERROR - DB Connection error
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 163, in get
+    cursor = g.appdb.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb'
+2016-09-12 14:55:58,502 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 14:55:58] "GET /api/auth/addUser?store_id=36104 HTTP/1.1" 500 -
+2016-09-12 15:03:31,693 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/app.py', reloading
+2016-09-12 15:06:30,816 - UserRole get - INFO - Entered into UserRole get method
+2016-09-12 15:06:30,816 - UserRole get - ERROR - DB Connection error
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 163, in get
+    cursor = g.appdb.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb'
+2016-09-12 15:06:30,832 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 15:06:30] "GET /api/auth/addUser?store_id=36104 HTTP/1.1" 500 -
+2016-09-12 17:31:06,533 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/app.py', reloading
+2016-09-12 18:17:01,895 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:17:01,897 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:17:01] "POST /api/auth/login HTTP/1.1" 400 -
+2016-09-12 18:19:55,586 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:19:55,588 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:19:55] "POST /api/auth/login HTTP/1.1" 400 -
+2016-09-12 18:20:17,969 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 18:20:22,316 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:20:22,317 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:20:22] "POST /api/auth/login HTTP/1.1" 400 -
+2016-09-12 18:22:02,673 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 18:22:08,571 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:22:08,572 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 36, in post
+    user=request.json
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 108, in json
+    return self.get_json()
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 145, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 162, in on_json_loading_failed
+    raise BadRequest()
+BadRequest: 400: Bad Request
+2016-09-12 18:22:08,626 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:22:08] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:22:55,185 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 18:23:34,946 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:23:34,946 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 36, in post
+    user=request.json
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 108, in json
+    return self.get_json()
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 145, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 162, in on_json_loading_failed
+    raise BadRequest()
+BadRequest: 400: Bad Request
+2016-09-12 18:23:34,964 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:23:34] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:25:57,422 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:25:57] "POST /auth/login HTTP/1.1" 404 -
+2016-09-12 18:26:10,421 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:26:10] "POST /api/uth/login HTTP/1.1" 404 -
+2016-09-12 18:26:39,542 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:26:39,543 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 36, in post
+    user=request.json
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 108, in json
+    return self.get_json()
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 145, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 162, in on_json_loading_failed
+    raise BadRequest()
+BadRequest: 400: Bad Request
+2016-09-12 18:26:39,564 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:26:39] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:27:26,532 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 18:27:47,530 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:27:47,531 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 19, in post
+    user=request.json
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 108, in json
+    return self.get_json()
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 145, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 162, in on_json_loading_failed
+    raise BadRequest()
+BadRequest: 400: Bad Request
+2016-09-12 18:27:47,553 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:27:47] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:28:36,962 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 18:33:50,857 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:33:50,857 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 19, in post
+    user = request.json
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 108, in json
+    return self.get_json()
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 145, in get_json
+    rv = self.on_json_loading_failed(e)
+  File "/usr/local/lib/python2.7/dist-packages/flask/wrappers.py", line 162, in on_json_loading_failed
+    raise BadRequest()
+BadRequest: 400: Bad Request
+2016-09-12 18:33:50,878 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:33:50] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:34:56,726 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:34:56,727 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 21, in post
+    cursor = g.appdb.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb'
+2016-09-12 18:34:56,753 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:34:56] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:35:43,381 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:35:43,382 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 21, in post
+    cursor = g.appdb.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb'
+2016-09-12 18:35:43,407 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:35:43] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:36:57,793 - __main__ - INFO - Entered into Get /api Call
+2016-09-12 18:36:57,794 - __main__ - INFO - Exiting from Get /api Call
+2016-09-12 18:36:57,795 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:36:57] "GET /api HTTP/1.1" 200 -
+2016-09-12 18:37:53,726 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 18:37:59,257 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:37:59,259 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 22, in post
+    cursor = g.appdb.cursor()
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb'
+2016-09-12 18:37:59,292 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:37:59] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:38:19,141 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 18:38:22,285 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 18:38:22,286 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 20, in post
+    print g.appdb
+  File "/usr/local/lib/python2.7/dist-packages/werkzeug/local.py", line 343, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: '_AppCtxGlobals' object has no attribute 'appdb'
+2016-09-12 18:38:22,314 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 18:38:22] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-12 18:42:08,367 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/app.py', reloading
+2016-09-12 18:43:35,770 - __main__ - ERROR - Failed to Connect to the database
+Traceback (most recent call last):
+  File "app.py", line 31, in connect_db
+    db=config.get("dbname"), cursorclass=MySQLdb.cursors.DictCursor,sql_mode="STRICT_TRANS_TABLES")  # name of the data base
+AttributeError: 'module' object has no attribute 'cursors'
+2016-09-12 19:01:57,820 - __main__ - ERROR - Failed to Connect to the database
+Traceback (most recent call last):
+  File "app.py", line 31, in connect_db
+    db=config.get("dbname"), cursorclass=MySQLdb.cursors.DictCursor,sql_mode="STRICT_TRANS_TABLES")  # name of the data base
+AttributeError: 'module' object has no attribute 'cursors'
+2016-09-12 19:06:33,121 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/app.py', reloading
+2016-09-12 19:09:55,515 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 19:09:55,517 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 19:09:55] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-12 19:58:31,784 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 19:58:31,787 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 19:58:31] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-12 19:58:49,087 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 19:58:49,090 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 19:58:49] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-12 19:59:02,738 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 19:59:02,740 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 19:59:02] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-12 19:59:32,173 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
+2016-09-12 20:02:49,689 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-12 20:02:49,694 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 20:02:49] "POST /api/auth/login HTTP/1.1" 200 -
