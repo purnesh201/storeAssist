@@ -12,6 +12,8 @@ import sys
 from MySQLdb import cursors
 
 from routes.auth import UserLogin
+from routes.check import CardCheckReport
+from routes.check import ItEquipmentReport
 
 app = Flask(__name__)
 
@@ -72,7 +74,9 @@ def setEmailRequirements():
     if not hasattr(g, 'config'):
         g.config = config
 
-api.add_resource(UserLogin, '/api/auth/login', endpoint='auth')
+api.add_resource(UserLogin, '/api/auth/login', endpoint = 'auth')
+api.add_resource(CardCheckReport, '/api/route/check/cardCheckReport', endpoint = 'cardCheckReport')
+api.add_resource(ItEquipmentReport, '/api/route/check/itEquipmentReport', endpoint = 'itEquipmentReport')
 
 
 @app.route('/api')

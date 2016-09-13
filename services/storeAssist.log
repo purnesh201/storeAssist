@@ -211,3 +211,87 @@ AttributeError: 'module' object has no attribute 'cursors'
 2016-09-12 19:59:32,173 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/auth.py', reloading
 2016-09-12 20:02:49,689 - UserLogin post - INFO - Entered into UserLogin method
 2016-09-12 20:02:49,694 - werkzeug - INFO - 127.0.0.1 - - [12/Sep/2016 20:02:49] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-13 15:52:12,699 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-13 15:52:12,728 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 15:52:12] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-13 15:55:02,141 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 15:55:02,143 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 15:55:02,351 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 15:55:02] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-13&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 500 -
+2016-09-13 15:59:09,081 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 15:59:38,644 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 15:59:38,645 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 15:59:38,647 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 15:59:38] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-13&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:00:00,998 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:00:00,999 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:00:01,000 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:00:01] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-14&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:05:49,677 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-13 16:05:49,680 - UserLogin post - ERROR - variables from url
+Traceback (most recent call last):
+  File "/home/mohan/project/storeAssist/services/routes/auth.py", line 37, in post
+    username = user["userid"]
+TypeError: list indices must be integers, not str
+2016-09-13 16:05:49,694 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:05:49] "POST /api/auth/login HTTP/1.1" 500 -
+2016-09-13 16:06:40,404 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-13 16:06:40,408 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:06:40] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-13 16:06:57,113 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-13 16:06:57,119 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:06:57] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-13 16:07:19,358 - UserLogin post - INFO - Entered into UserLogin method
+2016-09-13 16:07:19,363 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:07:19] "POST /api/auth/login HTTP/1.1" 200 -
+2016-09-13 16:07:39,230 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:07:39,231 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:07:39,232 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:07:39] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-13&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:08:10,347 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:08:10,349 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:08:10,350 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:08:10] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:08:19,795 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:08:19,796 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:08:19,797 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:08:19] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:10:28,915 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 16:14:15,779 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:14:15,780 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:14:15,781 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:14:15] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:17:59,472 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 16:18:54,959 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:18:55,007 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:18:55] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 500 -
+2016-09-13 16:19:51,041 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 16:20:07,733 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:20:07,754 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:20:07] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 500 -
+2016-09-13 16:21:56,082 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 16:22:02,625 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:22:02,645 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:22:02] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 500 -
+2016-09-13 16:22:20,480 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 16:22:24,294 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:22:24,316 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:22:24] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 500 -
+2016-09-13 16:24:31,568 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 16:25:24,138 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:25:24,166 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:25:24] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 500 -
+2016-09-13 16:26:10,903 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 16:41:51,015 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:41:51,017 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:41:51,018 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:41:51] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:42:27,370 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:42:27,371 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:42:27,373 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:42:27] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:44:10,727 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:44:10,729 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:44:10,731 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:44:10] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-09&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:44:41,924 - CardCheckReport - INFO - Entered into CardCheckReport get  method
+2016-09-13 16:44:41,986 - CardCheckReport - INFO - Exited from the CardCheckReport Method
+2016-09-13 16:44:41,987 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 16:44:41] "GET /api/route/check/cardCheckReport?store_id=36104&reported_date=2016-09-08&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 16:48:50,819 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 17:02:37,467 - ItEquipmentReport - INFO - Entered into ItEquipmentReport get  method
+2016-09-13 17:02:37,558 - ItEquipmentReport - INFO - Exited from the ItEquipmentReport Method
+2016-09-13 17:02:37,559 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 17:02:37] "GET /api/route/check/itEquipmentReport?store_id=36104&reported_date=2016-09-08&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 17:02:42,523 - ItEquipmentReport - INFO - Entered into ItEquipmentReport get  method
+2016-09-13 17:02:42,524 - ItEquipmentReport - INFO - Exited from the ItEquipmentReport Method
+2016-09-13 17:02:42,544 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 17:02:42] "GET /api/route/check/itEquipmentReport?store_id=36104&reported_date=2016-09-08&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 500 -
+2016-09-13 17:03:52,440 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
+2016-09-13 17:04:13,088 - ItEquipmentReport - INFO - Entered into ItEquipmentReport get  method
+2016-09-13 17:04:13,090 - ItEquipmentReport - INFO - Exited from the ItEquipmentReport Method
+2016-09-13 17:04:13,091 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 17:04:13] "GET /api/route/check/itEquipmentReport?store_id=36104&reported_date=2016-09-08&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 17:05:23,140 - ItEquipmentReport - INFO - Entered into ItEquipmentReport get  method
+2016-09-13 17:05:23,231 - ItEquipmentReport - INFO - Exited from the ItEquipmentReport Method
+2016-09-13 17:05:23,231 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 17:05:23] "GET /api/route/check/itEquipmentReport?store_id=36104&reported_date=2016-09-10&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 17:05:26,574 - ItEquipmentReport - INFO - Entered into ItEquipmentReport get  method
+2016-09-13 17:05:26,575 - ItEquipmentReport - INFO - Exited from the ItEquipmentReport Method
+2016-09-13 17:05:26,576 - werkzeug - INFO - 127.0.0.1 - - [13/Sep/2016 17:05:26] "GET /api/route/check/itEquipmentReport?store_id=36104&reported_date=2016-09-10&employee_initials=p&reported_time=11:10:52 HTTP/1.1" 200 -
+2016-09-13 17:06:03,533 - werkzeug - INFO -  * Detected change in '/home/mohan/project/storeAssist/services/routes/check.py', reloading
