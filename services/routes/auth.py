@@ -1,5 +1,6 @@
 from flask_restful import reqparse
 from flask_restful import Resource
+from app import app
 from flask import  jsonify, abort, make_response, request, g
 import MySQLdb
 import collections
@@ -19,6 +20,7 @@ UserLoginSchema = {
 	"required": ["password","userid"]
 }
 
+@app.route('/')
 class UserLoginSchemaApiInputs(Inputs):
     json = [JsonSchema(schema=UserLoginSchema)]
 
@@ -29,7 +31,7 @@ class UserLogin(Resource):
 
         inputs = UserLoginSchemaApiInputs(request)
         if not inputs.validate():
-            return jsonify(success=False, errors=inputs.errors)        
+            return jsonify(success=False, errors=inputs.errors)
 
         try:
             user = request.json
