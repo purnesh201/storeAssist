@@ -1,5 +1,5 @@
 #!flask/bin/python
-from flask import Flask, jsonify, abort, make_response, request, g
+from flask import Flask, jsonify, abort, make_response, request, g, render_template
 from flask_restful import reqparse
 from flask_restful import Resource, Api
 import kaptan
@@ -11,15 +11,17 @@ import logging.config
 import sys
 from MySQLdb import cursors
 
-from routes.auth import UserLogin
-from routes.check import CardCheckReport
-from routes.check import ItEquipmentReport
+from routes.accountAPI import account_api
+from routes.auth import UserLogin, Deco
+
 
 # from flask import Flask, render_template,request,jsonify
 # import json
 # import jsonschema
 #
-# app = Flask(__name__)
+app = Flask(__name__)
+
+app.register_blueprint(account_api)
 #
 #
 # @app.route("/")
@@ -98,9 +100,10 @@ def setEmailRequirements():
     if not hasattr(g, 'config'):
         g.config = config
 
-api.add_resource(UserLogin, '/api/auth/login', endpoint = 'auth')
-api.add_resource(CardCheckReport, '/api/route/check/cardCheckReport', endpoint = 'cardCheckReport')
-api.add_resource(ItEquipmentReport, '/api/route/check/itEquipmentReport', endpoint = 'itEquipmentReport')
+api.add_resource(UserLogin, '/api/auth/login', endpoint = 'UserLogin')
+api.add_resource(Deco, '/api/auth/deco', endpoint = 'Deco')
+# api.add_resource(CardCheckReport, '/api/route/check/cardCheckReport', endpoint = 'cardCheckReport')
+# api.add_resource(ItEquipmentReport, '/api/route/check/itEquipmentReport', endpoint = 'itEquipmentReport')
 
 
 @app.route('/api')
@@ -114,7 +117,7 @@ def index():
 
 #,ssl_context='adhoc'
 if __name__ == '__main__':
-    app.run(host=config.get("host"), debug=config.get("debug"))
+    app.run(host='0.0.0.0', port = 8009, debug = True)
 #
 # if __name__ == '__main__':
 #     app.run(host='localhost', debug=True, port=5050)
