@@ -10,36 +10,11 @@ import json
 import logging.config
 import sys
 from MySQLdb import cursors
-
 from routes.auth import UserLogin
 from routes.check import CardCheckReport
 from routes.check import ItEquipmentReport
 
-# from flask import Flask, render_template,request,jsonify
-# import json
-# import jsonschema
-#
-# app = Flask(__name__)
-#
-#
-# @app.route("/")
-# def main():
-#    #return "Welcome!"
-#
-#     return render_template('index.html')
-#
-#
-# @app.route("/snd",methods=['POST'])
-# def snd():
-#     name=str(request.form['uname'])
-#     password=str(request.form['pwd'])
-#     fname=str(request.form['fname'])
-#     age=str(request.form['age'])
-#     if name=="chetna" and password=="123" :
-#
-#             return render_template('response.html', fname=fname ,age=age)
-#     else :
-#      return "Login Unsuccessful!! Try correct username and password"
+app = Flask(__name__)
 
 config = kaptan.Kaptan(handler="json")
 config.import_config(os.getenv("CONFIG_FILE_PATH", 'config.json'))
@@ -115,6 +90,3 @@ def index():
 #,ssl_context='adhoc'
 if __name__ == '__main__':
     app.run(host=config.get("host"), debug=config.get("debug"))
-#
-# if __name__ == '__main__':
-#     app.run(host='localhost', debug=True, port=5050)
