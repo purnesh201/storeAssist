@@ -11,8 +11,11 @@ import logging.config
 import sys
 from MySQLdb import cursors
 
+from routes.auth import UserLogin
+from routes.check import CardCheckReport
+from routes.check import ItEquipmentReport
 from routes.accountAPI import account_api
-from routes.auth import UserLogin, Deco
+
 
 
 # from flask import Flask, render_template,request,jsonify
@@ -42,6 +45,8 @@ app.register_blueprint(account_api)
 #             return render_template('response.html', fname=fname ,age=age)
 #     else :
 #      return "Login Unsuccessful!! Try correct username and password"
+
+app = Flask(__name__)
 
 config = kaptan.Kaptan(handler="json")
 config.import_config(os.getenv("CONFIG_FILE_PATH", 'config.json'))
