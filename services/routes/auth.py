@@ -23,11 +23,11 @@ import os
 #     },
 # 	"required": ["password","userid"]
 # }
-auth = Flask(__name__)
+# auth = Flask(__name__)
 auth.secret_key = os.urandom(24)
 
 @auth.route('/' , methods=['GET', 'POST'])
-def main():
+def Login():
     if request.method == 'POST':
         session.pop('user' , None)
 
@@ -90,6 +90,10 @@ def dropsession():
 #             return render_template('response.html', fname=fname , age=age , nums=lst)
 #     else :
 #      return "Login Unsuccessful!! Try correct username and password" 
+# 
+
+
+
 # class UserLoginSchemaApiInputs(Inputs):
 #     json = [JsonSchema(schema=UserLoginSchema)]
 
@@ -129,5 +133,5 @@ def dropsession():
 #         return jsonify({"status":"success","response":rv})
 
 
-if __name__ == '__main__':
-    auth.run(host='localhost', debug=True, port=5050)
+# if __name__ == '__main__':
+#     auth.run(host='localhost', debug=True, port=5050)
