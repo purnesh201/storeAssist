@@ -1,9 +1,6 @@
 #!flask/bin/python
-# <<<<<<< HEAD
 from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for
-# =======
-# from flask import Flask, jsonify, abort, make_response, request, g, render_template
-# >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
+
 from flask_restful import reqparse
 from flask_restful import Resource, Api
 import kaptan
@@ -14,26 +11,17 @@ import json
 import logging.config
 import sys
 from MySQLdb import cursors
-# <<<<<<< HEAD
+
+
 # from routes.auth import  Loginn
-# # =======
-
-# from routes.auth import UserLogin
-# from routes.check import CardCheckReport
-# from routes.check import ItEquipmentReport
 # from routes.accountAPI import account_api
-
-
-
-# from flask import Flask, render_template,request,jsonify
-# import json
 # import jsonschema
-#
+
+
 app = Flask(__name__)
 
 # app.register_blueprint(account_api)
-#
-#
+
 # @app.route("/")
 # def main():
 #    #return "Welcome!"
@@ -53,7 +41,6 @@ app = Flask(__name__)
 #     else :
 #      return "Login Unsuccessful!! Try correct username and password"
 
-# >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
 app = Flask(__name__)
 
 config = kaptan.Kaptan(handler="json")
@@ -71,8 +58,7 @@ def Login():
         session.pop('user' , None)
 
         if  request.form['password'] == 'singh':
-            
-    #return "hi"
+
             session['user'] =  request.form['user']
             return redirect(url_for('protected'))
 
@@ -156,7 +142,6 @@ def teardown_request(exception):
     if hasattr(g, 'appdb'):
         g.appdb.close()
 
-# <<<<<<< HEAD
 # @app.before_first_request
 # def setup_logging(default_path='logconf.json', default_level=logging.INFO, env_key='LOG_CFG_PATH'):
 #     """Setup logging configuration"""
@@ -176,7 +161,7 @@ def teardown_request(exception):
 #         g.config = config
 
 # api.add_resource(Loginn, '/api/auth/login', endpoint = 'auth')
-# =======
+
 # @app.before_first_request
 # def setup_logging(default_path='logconf.json', default_level=logging.INFO, env_key='LOG_CFG_PATH'):
 #     """Setup logging configuration"""
@@ -197,34 +182,17 @@ def teardown_request(exception):
 
 # api.add_resource(UserLogin, '/api/auth/login', endpoint = 'UserLogin')
 # api.add_resource(Deco, '/api/auth/deco', endpoint = 'Deco')
-# >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
-# api.add_resource(CardCheckReport, '/api/route/check/cardCheckReport', endpoint = 'cardCheckReport')
 # api.add_resource(ItEquipmentReport, '/api/route/check/itEquipmentReport', endpoint = 'itEquipmentReport')
 
 
-# <<<<<<< HEAD
-# # @app.route('/api')
-# # def index():
-# #     # same result even with Flask-MySQL - We need to use the Index to Get
-# #     # Values and Map to OrderedDict to create JSON.
-# #     logger.info('Entered into Get /api Call')
-# #     logger.debug(request.headers.get('User-Agent'))
-# #     logger.info('Exiting from Get /api Call')
-# #     return jsonify({"status": "success", "response": "API is up at the URL"})
-# =======
-# @app.route('/api')
-# def index():
-#     # same result even with Flask-MySQL - We need to use the Index to Get
-#     # Values and Map to OrderedDict to create JSON.
-#     logger.info('Entered into Get /api Call')
-#     logger.debug(request.headers.get('User-Agent'))
-#     logger.info('Exiting from Get /api Call')
-#     return jsonify({"status": "success", "response": "API is up at the URL"})
-# >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
+@app.route('/api')
+def index():
+    # same result even with Flask-MySQL - We need to use the Index to Get
+    # Values and Map to OrderedDict to create JSON.
+    logger.info('Entered into Get /api Call')
+    logger.debug(request.headers.get('User-Agent'))
+    logger.info('Exiting from Get /api Call')
+    return jsonify({"status": "success", "response": "API is up at the URL"})
 
-#,ssl_context='adhoc'
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 8009, debug = True)
-#
-# if __name__ == '__main__':
-#     app.run(host='localhost', debug=True, port=5050)
