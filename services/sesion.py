@@ -1,0 +1,41 @@
+from flask import Flask,url_for, request,session, redirect,render_template,g
+import os
+
+app = Flask(__name__)
+app.secret_key = os.urandom(24)
+
+@app.route('/',methods=['GET','POST'])
+def index():
+    if request.method == 'POST':
+        session.pop('user',None)
+        if request.form['password'] == 'password':
+            session['user'] = request.form['username']
+            return redirect(url_for('protected'))
+    return render_template('index.html')
+
+@app.route('/protected')
+def protected():
+    if g.user:
+        return render_template('protected.html')
+    return redirect(url_for('index'))
+
+@app.before_request
+def before_request():
+    g.user = None
+    if 'user' in session:
+        g.user = session['user']
+
+@app.route('/getsession')
+def getsession():
+    if 'user' in session:
+        return session['user']
+
+    return 'Not logged in!'
+
+@app.route('/dropsession')
+def dropsession():
+    session.pop('user', None)
+    return "<h1> Logged out! </h1>"
+
+if __name__ == '__main__':
+    app.run(host='127.0.63', port=8063, debug=True)

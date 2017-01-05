@@ -1,48 +1,13 @@
 <html>
 <head>
-
-
-<style>
-	body {background-color: powderblue;}
-   h1   {color: blue;}
-
-   .button {
-            padding: 10px 20px;
-            font-size: 15px;
-            text-align: center;
-            cursor: pointer;
-            outline: none;
-            color: #fff;
-            background-color: #4CAF50;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 9px #999;
-          }
-
-.button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-</style>
+  <title> Login Page </title>
 </head>
-  <body bgcolor="#E6E6FA">
-
- <form  action=" {{url_for('snd')}}" method="POST">
-  
-   <p>
-          User Name:<input type="text" id="uname" name="uname">
-      </p>
-          <p>
-          Password:<input type="password" id="pwd" name="pwd">
-      </p>
-      <p><label>Enter your full name</label><input type="text" name="fname" id="fname"></p>
-      <p><label>Enter your age</label><input type="text" name="age" id="age"></p>
-          <p><button class="button">Login</button>
-   </p>
-
+<body>
+  <h1> Please Login </h1>
+<form method='POST'>
+  <input type='text' name='username'><br>
+  <input type='password' name='password'><br>
+  <input type='submit'>
 </form>
 </body>
 </html>
