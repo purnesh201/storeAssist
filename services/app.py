@@ -1,19 +1,15 @@
 #!flask/bin/python
 # <<<<<<< HEAD
-from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for
+from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for, flash
 # =======
 # from flask import Flask, jsonify, abort, make_response, request, g, render_template
 # >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
-from flask_restful import reqparse
-from flask_restful import Resource, Api
-import kaptan
+from flask import Flask
+from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
-import MySQLdb
-import logging
-import json
-import logging.config
-import sys
-from MySQLdb import cursors
+from sqlalchemy.orm import sessionmaker
+from tabledef import *
+
 # <<<<<<< HEAD
 # from routes.auth import  Loginn
 # # =======
@@ -29,7 +25,6 @@ from MySQLdb import cursors
 # import json
 # import jsonschema
 #
-app = Flask(__name__)
 
 # app.register_blueprint(account_api)
 #
@@ -54,107 +49,58 @@ app = Flask(__name__)
 #      return "Login Unsuccessful!! Try correct username and password"
 
 # >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
+
+# config = kaptan.Kaptan(handler="json")
+# config.import_config(os.getenv("CONFIG_FILE_PATH", 'config.json'))
+# environment = config.get('environment')
+
+# api = Api(app)
+# logger = logging.getLogger(__name__)
 app = Flask(__name__)
 
-config = kaptan.Kaptan(handler="json")
-config.import_config(os.getenv("CONFIG_FILE_PATH", 'config.json'))
-environment = config.get('environment')
-
-api = Api(app)
-logger = logging.getLogger(__name__)
-
 app.secret_key = os.urandom(24)
+'\x8f2\xb0\xa6D\xb0ID;y\xb1\xd9V\x19\xab\xa0\xd6c\\r\x01\x12\x08D'
 
-@app.route('/' , methods=['GET', 'POST'])
-def Login():
-    if request.method == 'POST':
-        session.pop('user' , None)
-
-        if  request.form['password'] == 'singh':
-            
-    #return "hi"
-            session['user'] =  request.form['user']
-            return redirect(url_for('protected'))
-
-    return render_template('index.html')
-
-@app.route('/protected')
-def protected():
-    if g.user :
-       return render_template('response.html')
-
-    return render_template('index.html')
+engine = create_engine('sqlite:///login.db', echo=True)
 
 
 
 
-
-def connect_db():
-    """Connects to the specific database."""
-    try:
-        db = MySQLdb.connect(host=config.get('localhost'),  # your host, usually localhost
-                         user=config.get("root"),  # your username
-                         passwd=config.get("root"),  # your password
-                         db=config.get("store"), cursorclass=MySQLdb.cursors.DictCursor,sql_mode="STRICT_TRANS_TABLES")  # name of the data base
-        return db
-    except:
-        logger.error('Failed to Connect to the database', exc_info=True)
-        sys.exit("not able to connect to database")
-
-
-def get_db():
-    """Opens a new database connection if there is none yet for the
-    current application context.
-    """
-    if not hasattr(g, 'appdb'):
-        g.appdb = connect_db()
-    return g.appdb
-
-@app.before_request
-def before_request():
-    g.user = None
-    if 'user' in session:
-        g.user = session['user']
-    # g.appdb = get_db()
-    # setEmailRequirements()
+@app.route('/')
+def  main():
+    if not session.get('logged_in'):
+        return render_template('index.html')
+    else:
+        return "Hello Boss!  <a href='/logout'>Logout</a>"
 
 
 
-@app.route('/getsession')
-def getsession():
-    if 'user' in session:
-        return session['user']
-    return 'Not logged in !'
-
-@app.route('/dropsession')
-def dropsession():
-    session.pop('user' , None)
-    return 'Dropped!'
+@app.route('/login', methods=["POST"])
+def login():
 
 
+    POST_USERNAME = str(request.form['username'])
+    POST_PASSWORD = str(request.form['password'])
+ 
+    Session = sessionmaker(bind=engine)
+    s = Session()
+    query = s.query(User).filter(User.username.in_([POST_USERNAME]), User.password.in_([POST_PASSWORD]) )
+    result = query.first()
 
-@app.after_request
-def remove_if_invalid(response):
-    if "__invalidate__" in session:
-        response.delete_cookie(app.session_cookie_name)
-    return response
+    if result:
+        session['logged_in'] = True
+        return render_template('response.html')
+    else:
+        flash('wrong password!')
+    return main()
 
-
-
-
-@app.route("/logout")
+@app.route('/logout', methods=["POST"])
 def logout():
-    session["__invalidate__"] = True
-    return redirect(url_for("Login"))
+    session['logged_in'] = False
+    return  render_template('index.html')
 
 
 
-
-
-@app.teardown_request
-def teardown_request(exception):
-    if hasattr(g, 'appdb'):
-        g.appdb.close()
 
 # <<<<<<< HEAD
 # @app.before_first_request

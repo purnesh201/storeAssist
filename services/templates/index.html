@@ -30,10 +30,10 @@
 </head>
   <body bgcolor="#E6E6FA">
     <h1> LOGIN </h1>
-    <form method="POST">     
+    <form method="POST" action="{{url_for('login')}}">     
   
    <p>
-          User Name:<input type="text" id="user" name="user">
+          User Name:<input type="text" id="username" name="username">
       </p>
           <p>
           Password:<input type="password" id="password" name="password">
