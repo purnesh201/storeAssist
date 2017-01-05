@@ -1,4 +1,5 @@
 #!flask/bin/python
+<<<<<<< HEAD
 # <<<<<<< HEAD
 from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for, flash
 # =======
@@ -13,42 +14,29 @@ from tabledef import *
 # <<<<<<< HEAD
 # from routes.auth import  Loginn
 # # =======
+# =======
+# from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for
 
-# from routes.auth import UserLogin
-# from routes.check import CardCheckReport
-# from routes.check import ItEquipmentReport
-# from routes.accountAPI import account_api
-
-
-
-# from flask import Flask, render_template,request,jsonify
+# from flask_restful import reqparse
+# from flask_restful import Resource, Api
+# import kaptan
+# import os
+# import MySQLdb
+# import logging
 # import json
+# import logging.config
+# import sys
+# from MySQLdb import cursors
+# >>>>>>> c4092cf63d7fe3f84c934f1d5c7ca83f3140f1e0
+
+
+# from routes.auth import  Loginn
+# from routes.accountAPI import account_api
 # import jsonschema
-#
+
+
 
 # app.register_blueprint(account_api)
-#
-#
-# @app.route("/")
-# def main():
-#    #return "Welcome!"
-#
-#     return render_template('index.html')
-#
-#
-# @app.route("/snd",methods=['POST'])
-# def snd():
-#     name=str(request.form['uname'])
-#     password=str(request.form['pwd'])
-#     fname=str(request.form['fname'])
-#     age=str(request.form['age'])
-#     if name=="chetna" and password=="123" :
-#
-#             return render_template('response.html', fname=fname ,age=age)
-#     else :
-#      return "Login Unsuccessful!! Try correct username and password"
-
-# >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
 
 # config = kaptan.Kaptan(handler="json")
 # config.import_config(os.getenv("CONFIG_FILE_PATH", 'config.json'))
@@ -62,6 +50,7 @@ app.secret_key = os.urandom(24)
 '\x8f2\xb0\xa6D\xb0ID;y\xb1\xd9V\x19\xab\xa0\xd6c\\r\x01\x12\x08D'
 
 engine = create_engine('sqlite:///login.db', echo=True)
+
 
 
 
@@ -102,7 +91,6 @@ def logout():
 
 
 
-# <<<<<<< HEAD
 # @app.before_first_request
 # def setup_logging(default_path='logconf.json', default_level=logging.INFO, env_key='LOG_CFG_PATH'):
 #     """Setup logging configuration"""
@@ -122,7 +110,7 @@ def logout():
 #         g.config = config
 
 # api.add_resource(Loginn, '/api/auth/login', endpoint = 'auth')
-# =======
+
 # @app.before_first_request
 # def setup_logging(default_path='logconf.json', default_level=logging.INFO, env_key='LOG_CFG_PATH'):
 #     """Setup logging configuration"""
@@ -143,21 +131,9 @@ def logout():
 
 # api.add_resource(UserLogin, '/api/auth/login', endpoint = 'UserLogin')
 # api.add_resource(Deco, '/api/auth/deco', endpoint = 'Deco')
-# >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
-# api.add_resource(CardCheckReport, '/api/route/check/cardCheckReport', endpoint = 'cardCheckReport')
 # api.add_resource(ItEquipmentReport, '/api/route/check/itEquipmentReport', endpoint = 'itEquipmentReport')
 
 
-# <<<<<<< HEAD
-# # @app.route('/api')
-# # def index():
-# #     # same result even with Flask-MySQL - We need to use the Index to Get
-# #     # Values and Map to OrderedDict to create JSON.
-# #     logger.info('Entered into Get /api Call')
-# #     logger.debug(request.headers.get('User-Agent'))
-# #     logger.info('Exiting from Get /api Call')
-# #     return jsonify({"status": "success", "response": "API is up at the URL"})
-# =======
 # @app.route('/api')
 # def index():
 #     # same result even with Flask-MySQL - We need to use the Index to Get
@@ -166,11 +142,6 @@ def logout():
 #     logger.debug(request.headers.get('User-Agent'))
 #     logger.info('Exiting from Get /api Call')
 #     return jsonify({"status": "success", "response": "API is up at the URL"})
-# >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
 
-#,ssl_context='adhoc'
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port = 8009, debug = True)
-#
-# if __name__ == '__main__':
-#     app.run(host='localhost', debug=True, port=5050)
