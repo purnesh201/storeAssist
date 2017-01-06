@@ -1,11 +1,9 @@
 #!flask/bin/python
-<<<<<<< HEAD
 # <<<<<<< HEAD
 from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for, flash
 # =======
 # from flask import Flask, jsonify, abort, make_response, request, g, render_template
 # >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
-from flask import Flask
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
 from sqlalchemy.orm import sessionmaker
@@ -55,8 +53,8 @@ engine = create_engine('sqlite:///login.db', echo=True)
 
 
 
-@app.route('/')
-def  main():
+@app.route('/', methods=['GET'])
+def  index():
     if not session.get('logged_in'):
         return render_template('index.html')
     else:
@@ -70,6 +68,7 @@ def login():
 
     POST_USERNAME = str(request.form['username'])
     POST_PASSWORD = str(request.form['password'])
+    print POST_USERNAME, POST_PASSWORD
  
     Session = sessionmaker(bind=engine)
     s = Session()
@@ -86,7 +85,8 @@ def login():
 @app.route('/logout', methods=["POST"])
 def logout():
     session['logged_in'] = False
-    return  render_template('index.html')
+    return  redirect(url_for('index'))
+
 
 
 
