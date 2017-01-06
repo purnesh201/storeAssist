@@ -5,3 +5,15 @@
 3. Python Flask and Flask-RestFul for Services.
 5. Logging and Kaptan
 
+**** Things to be done ****
+1) ORM and sqlalchemy or sqllite
+2) SQL and MongoDB connections with samples of GET and POST.
+3) JWT Token Generation
+4) Session in Flask
+5) Logging
+6) Unit Testing
+7) Jinja2 templates examples with for loops, conditions, export.
+8) BluePrint for file handing
+9) Upload Handlers Flask
+10) Python Debugger
+11) XSS and CSRF security
