@@ -1,21 +1,21 @@
 #!flask/bin/python
 from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for, flash
 import sqlalchemy
-from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
 from sqlalchemy.orm import sessionmaker
 from tabledef import *
 from flask_restful import reqparse
 from flask_restful import Resource, Api
+from pymongo import MongoClient
+import logging
 import kaptan
 import os
 import MySQLdb
-import logging
 import json
 import logging.config
 import sys
 from MySQLdb import cursors
-
+from bson.json_util import dumps
 
 # from routes.auth import  Loginn
 from routes.accountAPI import account_api
@@ -53,6 +53,29 @@ def connect_db():
         logger.error('Failed to Connect to the database', exc_info=True)
         sys.exit("not able to connect to database")
 
+def connect_mongo():
+    settings = {
+    'mongohost': config.get('mongohost'),
+    'database': config.get('database'),
+    'username': config.get('username'),
+    'password': config.get('password'),
+}
+    try:
+        conn = MongoClient("mongodb://{username}:{password}@{mongohost}/{database}".format(**settings))
+
+        return conn
+    except:
+        logger.error('Failed to Connect to the database', exc_info=True)
+        sys.exit("not able to connect to database")
+
+def get_mongo():
+    """Opens a new database connection if there is none yet for the
+    current application context.
+    """
+    if not hasattr(g, 'mongo'):
+        g.mongo = connect_mongo()
+    return g.mongo
+
 
 def get_db():
     """Opens a new database connection if there is none yet for the
@@ -65,13 +88,15 @@ def get_db():
 @app.before_request
 def before_request():
     g.appdb = get_db()
+    g.mongo = get_mongo()
     setEmailRequirements()
 
 @app.teardown_request
 def teardown_request(exception):
     if hasattr(g, 'appdb'):
         g.appdb.close()
-
+    if hasattr(g, 'mongo'):
+        g.mongo.close()
 
 
 # @app.route('/', methods=['GET'])
@@ -110,28 +135,6 @@ def teardown_request(exception):
 # def logout():
 #     session['logged_in'] = False
 #     return  redirect(url_for('index'))
-#
-#
-
-
-
-@app.before_first_request
-def setup_logging(default_path='logconf.json', default_level=logging.INFO, env_key='LOG_CFG_PATH'):
-    """Setup logging configuration"""
-    path = default_path
-    value = os.getenv(env_key, None)
-    if value:
-        path = value
-    if os.path.exists(path):
-        with open(path, 'rt') as f:
-            config = json.load(f)
-        logging.config.dictConfig(config)
-    else:
-        logging.basicConfig(level=default_level)
-
-def setEmailRequirements():
-    if not hasattr(g, 'config'):
-        g.config = config
 
 #api.add_resource(Loginn, '/api/auth/login', endpoint = 'auth')
 
@@ -165,10 +168,13 @@ app.register_blueprint(account_api)
 def index():
     # same result even with Flask-MySQL - We need to use the Index to Get
     # Values and Map to OrderedDict to create JSON.
+    cursor = g.mongo.test
+    print cursor
+    coll = cursor.movies.find()
     logger.info('Entered into Get /api Call')
     logger.debug(request.headers.get('User-Agent'))
     logger.info('Exiting from Get /api Call')
-    return jsonify({"status": "success", "response": "API is up at the URL"})
+    return jsonify({"status": "success", "response": dumps(coll)})
 
 if __name__ == '__main__':
     app.run(host=config.get("host"), port = config.get("port"), debug=config.get("debug"))
