@@ -1,50 +1,64 @@
-from flask import Flask,url_for, render_template,redirect,request,jsonify,session,g
-import json
-import jsonschema
-import MySQLdb
-import os
+# from flask_restful import reqparse
+# from flask_restful import Resource
+# # from app import app
+# from flask import  jsonify, abort, make_response, request, g
+# import MySQLdb
+# import collections
+# import logging
+# import hashlib, uuid
 
-auth = Flask(__name__)
-auth.secret_key = os.urandom(24)
+# from flask_inputs import Inputs
+# from flask_inputs.validators import JsonSchema
+# from jsonschema import validate
+# UserLoginSchema = {
+#     'type': 'object',
+#     'properties': {
+#         'userid': {'type': 'string'},
+# 		'password': {'type': 'string'}
+#     },
+# 	"required": ["password","userid"]
+# }
+# auth = Flask(__name__)
+# auth.secret_key = os.urandom(24)
 
-@auth.route('/' , methods=['GET', 'POST'])
-def main():
-    if request.method == 'POST':
-        session.pop('user' , None)
+# @auth.route('/' , methods=['GET', 'POST'])
+# def main():
+#     if request.method == 'POST':
+#         session.pop('user' , None)
 
-        if  request.form['password'] == 'password':
+#         if  request.form['password'] == 'password' :
+            
+#     #return "hi"
+#             session['user'] =  request.form['chetna']
+#             return redirect(url_for('protected'))
 
-    #return "hi"
-            session['user'] =  request.form['username']
-            return redirect(url_for('protected'))
+#     return render_template('index.html')
 
-    return render_template('index.html')
+# @auth.route('/protected')
+# def protected():
+#     if g.user:
+#        return render_template('response.html')
 
-@auth.route('/protected')
-def protected():
-    if g.user :
-       return render_template('response.html')
-
-    return render_template('index.html')
-
-
-@auth.before_request
-def before_request():
-    g.user = None
-    if 'user' in session:
-        g.user = session['user']
+#     return render_template('index.html')
 
 
-@auth.route('/getsession')
-def getsession():
-    if 'user' in session:
-        return session['user']
-    return 'Not logged in !'
+# @auth.before_request
+# def before_request():
+#     g.user = None
+#     if 'user' in session:
+#         g.user = session['user']
+    
+    
+# @auth.route('/getsession')
+# def getsession():
+#     if 'user' in session:
+#         return session['user']
+#     return 'Not logged in !'
 
-@auth.route('/dropsession')
-def dropsession():
-    session.pop('user' , None)
-    return 'Dropped!'
+# @auth.route('/dropsession')
+# def dropsession():
+#     session.pop('user' , None)
+#     return 'Dropped!'
 
 
 # @auth.route("/snd",methods=['POST'])
@@ -66,11 +80,11 @@ def dropsession():
 #     cur.close()
 #     db.close()
 #     if name=="chetna" and password=="123" :
-
+            
 #             lst=[10,20,40,60,80]
 #             return render_template('response.html', fname=fname , age=age , nums=lst)
 #     else :
-#      return "Login Unsuccessful!! Try correct username and password"
+#      return "Login Unsuccessful!! Try correct username and password" 
 # class UserLoginSchemaApiInputs(Inputs):
 #     json = [JsonSchema(schema=UserLoginSchema)]
 
@@ -108,7 +122,3 @@ def dropsession():
 #         rv = cursor.fetchall()
 
 #         return jsonify({"status":"success","response":rv})
-
-
-if __name__ == '__main__':
-    auth.run(host='localhost', debug=True, port=5050)
