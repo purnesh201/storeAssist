@@ -1,18 +1,21 @@
-#!flask/bin/python
 # <<<<<<< HEAD
-from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for, flash
+# #!flask/bin/python
+# # <<<<<<< HEAD
+# from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for, flash
+# # =======
+# # from flask import Flask, jsonify, abort, make_response, request, g, render_template
+# # >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
 # =======
-# from flask import Flask, jsonify, abort, make_response, request, g, render_template
-# >>>>>>> b645304e2a3e34c546406fcd8fb7015388ccaebb
+from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for, flash
+
+import sqlalchemy
+# from flask import Flask
+# >>>>>>> 5a0004ee08d6f17e7701683dcb14bc38587bae7e
 from flask import Flask, flash, redirect, render_template, request, session, abort
 import os
 from sqlalchemy.orm import sessionmaker
 from tabledef import *
 
-# <<<<<<< HEAD
-# from routes.auth import  Loginn
-# # =======
-# =======
 # from flask import Flask, jsonify, abort, make_response, request, g , session , render_template , redirect , url_for
 
 # from flask_restful import reqparse
@@ -25,7 +28,6 @@ from tabledef import *
 # import logging.config
 # import sys
 # from MySQLdb import cursors
-# >>>>>>> c4092cf63d7fe3f84c934f1d5c7ca83f3140f1e0
 
 
 # from routes.auth import  Loginn
@@ -68,8 +70,11 @@ def login():
 
     POST_USERNAME = str(request.form['username'])
     POST_PASSWORD = str(request.form['password'])
+
     print POST_USERNAME, POST_PASSWORD
  
+
+
     Session = sessionmaker(bind=engine)
     s = Session()
     query = s.query(User).filter(User.username.in_([POST_USERNAME]), User.password.in_([POST_PASSWORD]) )
