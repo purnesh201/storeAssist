@@ -17,7 +17,7 @@ import sys
 from MySQLdb import cursors
 from bson.json_util import dumps
 
-# from routes.auth import  Loginn
+from routes.auth import  UserLogin, SessionVerify
 from routes.accountAPI import account_api
 # import jsonschema
 
@@ -36,9 +36,6 @@ logger = logging.getLogger(__name__)
 
 
 app.secret_key = os.urandom(24)
-#'\x8f2\xb0\xa6D\xb0ID;y\xb1\xd9V\x19\xab\xa0\xd6c\\r\x01\x12\x08D'
-
-#engine = create_engine('sqlite:///login.db', echo=True)
 
 
 def connect_db():
@@ -117,14 +114,16 @@ def jinjaExample(current_url = None):
     ]
     key = request.args.get("key")
     return render_template('response.html', user=user, tasks = todoList, current=request)
-# @app.route('/', methods=['GET'])
-# def  index():
-#     if not session.get('logged_in'):
-#         return render_template('index.html')
-#     else:
-#         return "Hello Boss!  <a href='/logout'>Logout</a>"
-#
-#
+
+
+@app.route('/test', methods=['GET'])
+def  indexTest():
+    if "username" in session:
+        return 'successfully'
+    else:
+        return "Hello Boss!  <a href='/logout'>Logout</a>"
+
+
 #
 # @app.route('/login', methods=["POST"])
 # def login():
@@ -177,7 +176,8 @@ def setEmailRequirements():
 
 app.register_blueprint(account_api)
 
-# api.add_resource(UserLogin, '/api/auth/login', endpoint = 'UserLogin')
+api.add_resource(UserLogin, '/api/auth/login', endpoint = 'UserLogin')
+api.add_resource(SessionVerify, '/api/test', endpoint='test')
 # api.add_resource(Deco, '/api/auth/deco', endpoint = 'Deco')
 # api.add_resource(ItEquipmentReport, '/api/route/check/itEquipmentReport', endpoint = 'itEquipmentReport')
 
