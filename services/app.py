@@ -55,10 +55,10 @@ def connect_db():
 
 def connect_mongo():
     settings = {
-    'mongohost': config.get('mongohost'),
-    'database': config.get('database'),
-    'username': config.get('username'),
-    'password': config.get('password'),
+    'mongohost': "localhost",
+    'database': "test",
+    'username': "root",
+    'password': "root"
 }
     try:
         conn = MongoClient("mongodb://{username}:{password}@{mongohost}/{database}".format(**settings))
@@ -187,7 +187,6 @@ def index():
     # same result even with Flask-MySQL - We need to use the Index to Get
     # Values and Map to OrderedDict to create JSON.
     cursor = g.mongo.test
-    print cursor
     coll = cursor.movies.find()
     logger.info('Entered into Get /api Call')
     logger.debug(request.headers.get('User-Agent'))
