@@ -19,6 +19,7 @@ from bson.json_util import dumps
 
 from routes.auth import  UserLogin, SessionVerify
 from routes.accountAPI import account_api
+from routes.auth import users
 # import jsonschema
 
 
@@ -175,6 +176,7 @@ def setEmailRequirements():
 
 
 app.register_blueprint(account_api)
+app.register_blueprint(users)
 
 api.add_resource(UserLogin, '/api/auth/login', endpoint = 'UserLogin')
 api.add_resource(SessionVerify, '/api/test', endpoint='test')
