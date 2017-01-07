@@ -1,0 +1,56 @@
+body {
+  height: 100%;
+  background-color: $bg!important;
+  font-family: 'Open Sans', sans-serif;
+}
+ul,
+li {
+  list-style-type: none;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+.no-left-padding {
+  padding-left: 0;
+  margin-left: 0;
+}
+.js-fixedtext {
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="30"><text x="5" y="19" style="font: bold 16px Arial;">Level </text></svg>') no-repeat;
+  border: 1px solid #555;
+  box-sizing: border-box;
+  font: 16px "Arial";
+  height: 30px;
+  padding-left: 50px;
+  width: 300px;
+}
+.pickListButtons {
+  padding: 10px;
+  text-align: center;
+}
+.pickListButtons button {
+  margin-bottom: 5px;
+}
+.pickListSelect {
+  height: 200px;
+}
+.ui-multiselect-hasfilter ul {
+  position: relative;
+  top: 2px;
+}
+.ui-multiselect-filter {
+  float: left;
+  margin-right: 10px;
+  font-size: 11px;
+}
+.ui-multiselect-filter input {
+  width: 100px;
+  font-size: 10px;
+  margin-left: 5px;
+  height: 15px;
+  padding: 2px;
+  border: 1px solid #292929;
+  -webkit-appearance: textfield;
+  -webkit-box-sizing: content-box;
+}

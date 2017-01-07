@@ -1,0 +1,189 @@
+main {
+  margin-bottom: 40px;
+  margin-left: 240px;
+}
+
+.main--header {
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+
+.main--title {
+  font-size: 25px;
+  margin-bottom: 20px;
+
+  span > i {
+    margin-top: 6px;
+    margin-right: 10px;
+  }
+
+  input {
+    background-color: transparent;
+    border: 0;
+    font-size: 20px;
+  }
+}
+
+.main--subtitle {
+  font-size: 20px;
+  p {
+    margin-bottom: 30px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+div.sc_menu {
+  position: relative;
+  overflow: hidden;
+  //max-width: 1000px;
+  min-width: 400px;
+  max-width: 97%;
+
+  &:hover {
+    overflow: auto;
+  }
+}
+
+ul.sc_menu
+{
+  display: block;
+  width: 1500px;
+  padding: 0 0 0 10px;
+  margin: 0;
+  list-style: none;
+}
+
+.sc_menu li
+{
+  display: block;
+  float: left;
+  padding: 0 4px;
+}
+
+.sc_menu a
+{
+  display: block;
+  font-family: Arial,Helvetica,sans-serif;
+  font-size: 14px;
+  color: #000;
+  text-decoration: none;
+  padding: 5px 10px;
+}
+
+.faico {
+  margin: -35px auto;
+  padding: 2px;
+  background-color: #BCBCBC;
+  z-index: 999;
+
+}
+
+.sc_menu a:hover, .sc_menu .active a
+{
+  color: #000;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.margin_bottom {
+  margin-bottom: 100px;
+}
+
+.nav-tabs li {
+  margin-right: 10px;
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+  background-color: transparent;
+  border: 0;
+  border-bottom: 2px solid darken($red, 10%);
+  font-weight: bold;
+  padding: 10px 10px 10px 0;
+
+  &:hover {
+    background-color: transparent;
+    border: 0;
+    border-bottom: 2px solid darken($red, 10%);
+    color: black;
+
+  }
+}
+
+.nav-tabs > li > a {
+
+  color: inherit;
+
+  &:hover {
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 2px solid gray;
+
+  }
+
+}
+
+.nav-pills {
+  margin-bottom: 30px;
+  border: 1px solid #CCCCCC;
+  display: inline-block;
+  background-color: #CCCCCC;
+}
+
+.nav-pills > li > a {
+  border-radius: 0;
+  background-color: white;
+  color: inherit;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover {
+    background-color: darken($red, 10%);
+}
+
+.nav-pills > li.active > a {
+  background-color: darken($red, 10%);
+
+  &:focus {
+    background-color: darken($red, 10%);
+  }
+}
+
+.question {
+  margin-bottom: 50px;
+}
+
+.border-top {
+  border-top: 0;
+}
+
+.date-pick {
+
+  &:hover{
+    background-color: lighten($red, 40%)
+  }
+  &:focus {
+    background-color: lighten($red, 40%)
+  }
+}

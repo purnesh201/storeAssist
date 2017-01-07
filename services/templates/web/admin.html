@@ -1,0 +1,149 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Dashboard for super users to access the store data reports.">
+    <meta name="author" content="">
+    <title>Admin</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="dist/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <!-- <button class="btn menu-button" style="position: absolute; z-index: 22;">Click here</button> -->
+    <div class="container-fluid no-left-padding">
+        <aside class="slideInLeft animated">
+            <div class="aside--logo">
+                <a href="/admin.html">
+                    <img src="images/logo.png" alt="">
+                </a>
+            </div>
+            <ul class="aside-nav nav js-side-nav admin-side-nav-override">
+                <li class="active"><a href="#" id="js-admin-settings">Settings</a></li>
+            </ul>
+        </aside>
+
+        <div class="row" style="margin-left: 250px">
+            <div class="row">
+                <div class="col-sm-10 main--title">
+                    Store Assist
+                </div>
+                <div class="col-sm-2" style="margin-top: 62px">
+                    <div class="acc-info">
+                        <div class="dropdown">
+                            <button class="btn btn--account dropdown-toggle" id="js-user-name" type="button" data-toggle="dropdown">
+                                <small id="js-user-role"> Admin </small>&nbsp<i class="fa fa-caret-down"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown">
+                                <li class="active"><a href="#" id="js-admin-logout">Sign Out</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="font-size: 15px;margin-left: 7px">
+                <span style="">Settings</span>
+            </div>
+            <hr />
+        </div>
+
+        <div class="row js-store-main-div js-admin-main-div">
+            <div class="col-lg-offset-4 col-lg-8 col-md-4" id="js-selectstore-hide" style="margin-top:50px;background-color: white;text-align: center;width: 620px; height: 450px">
+                <form class="form-horizontal" id="js-signup-form" style="padding-top: 20px">
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="inputName">UserID:<span class="required-asterisk" style="color: red">*</span></label>
+                        <div class="col-xs-6">
+                            <input type="Name" onkeypress="check(event,this);" class="form-control keyup-name text-input" id="js-addUser-userId" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="inputName">Name:<span class="required-asterisk">*</span></label>
+                        <div class="col-xs-6">
+                            <input type="Name" onkeypress="check(event,this);" class="form-control keyup-name text-input" id="js-addUser-inputName" placeholder="Name">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="E-mail">E-mail:<span class="required-asterisk">*</span></label>
+                        <div class="col-xs-6">
+                            <input type="email" class="form-control" id="js-addUser-E-mail" placeholder="E-mail">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="Password">Password:<span class="required-asterisk">*</span></label>
+                        <div class="col-xs-6">
+                            <input type="password" class="form-control" id="js-addUser-Password" placeholder="Password">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3" for="Initials">Initials:<span class="required-asterisk">*</span></label>
+                        <div class="col-xs-6">
+                            <input type="text" onkeypress="checkinitial(event,this);" class="form-control keyup-intials text-input" maxlength="3" id="js-addUser-Initials" placeholder="Initials">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Store:</label>
+                        <div class="col-xs-6">
+                            <select class="form-control" id="js-addUser-stores">
+                                <option value="0">Select store</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label col-xs-3">Designation:</label>
+                        <div class="col-xs-6">
+                            <select class="form-control" id="js-addUser-Designation" disabled>
+
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-xs-offset-3 col-xs-9">
+                            <button type="submit" class="btn btn-primary" id="js-addNewUser-submit" disabled>Submit</button>
+                            <button type="reset" class="btn btn-default" id="js-button-reset">Reset</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+    <script src="/bower_components/handlebars/handlebars.js"></script>
+    <script src="/bower_components/moment/moment.js"></script>
+    <script src="/bower_components/moment-range/dist/moment-range.js"></script>
+    <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/bower_components/underscore/underscore-min.js"></script>
+    <script src="/src/js/pnotify.custom.min.js"></script>
+    <script src="/src/js/jquerypp.js"></script>
+    <script src="/src/js/jquery.fixedTblHdrLftCol.js"></script>
+    <script src="/src/js/interact.js"></script>
+    <script src="/src/js/app.js"></script>
+    <script src="/src/js/sha256.jquery.debug.js"></script>
+    <script src="/src/js/settings.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.aside--logo').find('img').attr('src', 'images/logo.png');
+        });
+        $('#js-admin-logout').on('click', function(ev) {
+            ev.preventDefault();
+            $.cookie('user', null);
+            document.location.href = '/';
+        });
+    </script>
+</body>
+
+</html>

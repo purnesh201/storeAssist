@@ -1,0 +1,205 @@
+.margin_left {
+  margin-left: 20px;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.error-whole-number {
+  border: red 1px solid;
+}
+.categories-content-div .accordian-header {
+  height: 45px !important;
+}
+.js-admin-wastage-div .panel-heading {
+  height: 45px !important;
+}
+.card-display {
+  margin: 40px 0;
+  .row > .col-md-2 {
+    background-color: white;
+    padding: 10px;
+    margin: 0 10px;
+    text-align: center;
+    small {
+      font-size: 10px;
+      line-height: 150%;
+    }
+  }
+}
+.font14 {
+  font-size: 16px;
+}
+.accordion {
+  margin: 50px 0;
+}
+.main--content {
+  margin-bottom: 40px;
+  .qcard {
+    margin: 2px 0;
+    background-color: white;
+    padding: 10px 0;
+    .qcard--notes > button {
+      padding: 5px;
+      font-size: 10px;
+    }
+    .well {
+      margin-top: 20px;
+    }
+  }
+}
+.order-mgmt {
+  // transform: scale(0.9);
+  // -ms-transform: scale(0.9);
+  // -webkit-transform: scale(0.9);
+}
+.order-mgmt iframe {
+  height: 75vh;
+  width: 75vw;
+  margin: 20px -75px;
+}
+.table-container > table > tbody > tr > td {
+  white-space: normal;
+}
+.unit {
+  margin-top: 0;
+}
+.-unit {
+  margin-top: -48px;
+  margin-bottom: -48px;
+}
+.dropdown-scroll {
+  height: 160px;
+  overflow: hidden;
+  &:hover {
+    overflow: auto;
+  }
+}
+.btcard {
+  background-color: white;
+  border: 2px solid #c5c5c5 !important;
+  tr > td {
+    padding: 20px !important;
+    &:first-child {
+      border-right: 2px solid #c5c5c5 !important;
+      padding-right: 15px !important;
+    }
+  }
+}
+.checkboxstore {
+  padding: 10px 15px 40px;
+}
+.edpen {
+  border: 1px solid;
+  padding: 3px 7px;
+  border-radius: 20px;
+  color: #333333;
+}
+.date--picker {
+  input {
+    border-right: transparent !important;
+  }
+  .input-group-addon {
+    background-color: transparent !important;
+    border-left: transparent !important;
+  }
+}
+.add-store {
+  display: block;
+  .f-child {
+    display: inline-block;
+    background-color: #eeeeee;
+    padding: 10px 20px 0;
+    text-align: center;
+  }
+  .l-child {
+    display: inline-block;
+    padding: 30px auto;
+    span > button {
+      padding: 30px 10px;
+      margin-top: -39px;
+    }
+  }
+}
+// .table-container {
+//   width: 400%;
+//   overflow-y: auto;
+//   // overflow: auto;
+//   margin: 0 0 1em;
+// }
+.r-space {
+  li,
+  li a {
+    margin-right: 0 !important;
+  }
+  a {
+    padding-right: 0 !important;
+  }
+}
+.js-wastage-sub-nav {
+  margin-bottom: 0;
+}
+.js-wastage-sub-nav-times {
+  display: block;
+  background-color: transparent;
+  border: transparent;
+}
+.waste-table {
+  min-height: 400px;
+  vertical-align: middle;
+}
+.js-pullover-table {
+  min-height: 400px;
+  vertical-align: middle;
+}
+.js-pulloversheets {
+  min-height: 200px;
+}
+.admin-side-nav li a {
+  padding-left: 50px;
+}
+.adm-selectstore-hide {
+  margin-top: 20%;
+}
+.js-search-report {
+  float: right;
+}
+.js-admin-performance-div {
+  margin-top: 20px;
+}
+.js-performence-dropdown {
+  float: left;
+}
+.js-admin-settings {
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  overflow-y: hidden;
+}
+.js-admin-settings li {
+  white-space: nowrap;
+}
+.adm-unit-profiles {
+  padding-bottom: 20px;
+}
+.js-admin-userlogin {
+  padding-bottom: 10px;
+}
+.adm-signup-form {
+  padding-top: 30px;
+}
+.required-asterisk {
+  color: red;
+}
+.adm-changepassword {
+  padding-top: 30px;
+}
+.adm-addsurvey {
+  margin-bottom: -40px;
+}
+.watermark {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  opacity: 0.5;
+  z-index: 99;
+  top: 150;
+}

@@ -1,0 +1,80 @@
+.btn {
+	padding: 10px;
+  	border-radius: 0;
+}
+
+.btn--action {
+	background-color: $green;
+	color: white;
+
+	&:hover {
+		background-color: darken($green, 10%);
+		color: white;
+	}
+}
+
+.btn--dark {
+  background-color: gray;
+  color: white;
+
+  &:hover {
+	background-color: #484848;
+	color: white;
+  }
+}
+
+.btn--reports {
+  background-color: white;
+  color: inherit;
+  border: 1px solid #CCCCCC;
+
+  &:hover {
+	background-color: darken(white, 10%);
+	color: white;
+  }
+}
+
+.btn--account {
+    background-color: transparent;
+    box-shadow: none;
+    border: 0;
+}
+
+.btn--tag {
+  padding: 5px 10px;
+  font-size: 11px;
+}
+
+    .leftArrowRollerGrills
+  {
+    width:30px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    top: 100px;
+    height: 40px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    text-align: center;
+    padding-top:10px;
+    padding-right: 15px;
+
+  }
+  .rightArrowRollerGrills
+  {
+    width:30px;
+    cursor: pointer;
+    display: none;
+    position: relative;
+    top: 58px;
+    height: 40px;
+    -webkit-user-select: none;  /* Chrome all / Safari all */
+    -moz-user-select: none;     /* Firefox all */
+    -ms-user-select: none;      /* IE 10+ */
+    user-select: none;          /* Likely future */
+    text-align: center;
+    padding:10px;
+
+  }

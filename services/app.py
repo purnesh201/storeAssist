@@ -74,6 +74,24 @@ def teardown_request(exception):
 
 
 
+@app.route('/', methods=['GET'])
+def homePage():
+    return render_template("web/index.html", )
+
+@app.route('/jinja/howla/<current_url>', methods=['GET'])
+def jinjaExample(current_url = None):
+    user = {'nickname': 'Purnesh'}
+    todoList = [
+        {"task":"logging", "lang":"python"},
+        {
+            "task": "debugging", "lang": "Javascript"
+        },
+        {
+            "task":"Databases", "lang":"mysql"
+        }
+    ]
+    key = request.args.get("key")
+    return render_template('response.html', user=user, tasks = todoList, current=request)
 # @app.route('/', methods=['GET'])
 # def  index():
 #     if not session.get('logged_in'):

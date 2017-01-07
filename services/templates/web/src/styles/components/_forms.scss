@@ -1,0 +1,30 @@
+.login--box{
+	background-color: white;
+	text-align: center;
+	padding: 20px;
+	margin-top: 50%;
+}
+
+.login--logo{
+	margin-bottom: 20px;
+	margin-top: -90px;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: white
+}
+
+.form-control {
+	border-radius: 0px;
+	box-shadow: none;
+	color: black;
+
+	&:focus {
+		box-shadow: none;
+		border-color: gray;
+		border-left: 3px solid lighten(black, 5%);
+	}
+}

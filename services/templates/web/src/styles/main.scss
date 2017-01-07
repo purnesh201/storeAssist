@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../../bower_components/fontawesome/fonts/fontawesome-webfont.eot");
+  src: url("../../bower_components/fontawesome/fonts/fontawesome-webfont.eot") format("embedded-opentype"),
+  url("../../bower_components/fontawesome/fonts/fontawesome-webfont.woff") format("woff"),
+  url("../../bower_components/fontawesome/fonts/fontawesome-webfont.ttf") format("truetype"),
+  url("../../bower_components/fontawesome/fonts/fontawesome-webfont.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@import '../../bower_components/bootstrap-sass-official/assets/stylesheets/_bootstrap.scss';
+
+@import '../../bower_components/fontawesome/scss/font-awesome.scss';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,300italic,300);
+
+
+//user styles
+@import "dots";
+@import "animate";
+@import "colors";
+@import "global";
+@import "components/_forms";
+@import "components/_buttons";
+@import "components/_aside";
+@import "components/_main-header";
+@import "components/_table";
+@import "components/_onoff";
+@import "components/_admin";
+@import "components/_pnotify";
+@import "components/_scrolltabs";

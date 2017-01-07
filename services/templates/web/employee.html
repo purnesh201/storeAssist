@@ -1,0 +1,97 @@
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Employee or Manager Dashboard.">
+    <meta name="author" content="">
+    <title>Dashboard - Employee</title>
+    <link rel="icon" href="favicon.ico">
+    <link href="dist/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="/bower_components/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css" />
+</head>
+
+<body>
+    <div class="container-fluid no-left-padding">
+        <aside class="slideInLeft animated">
+            <div class="aside--logo">
+                <a href="/employee.html"><img src="" alt=""></a>
+            </div>
+            <ul class="aside-nav nav js-side-nav">
+                <li class="employee-main-nav"><a href="#" data-url="order" id="js-ordermanage">Ben E. Keith Orders</a></li>
+                <li class="employee-main-nav"><a href="#" id="js-orderform" data-url="orderform">DBQ Orders</a></li>
+                <li class="active employee-main-nav"><a href="#" data-url="anticipated">Anticipated Sales</a></li>
+                <li class="employee-main-nav"><a href="#" id="js-pulloversheet" data-url="pulloversheets">Pullover Sheet</a></li>
+                <li class="employee-main-nav"><a href="#" data-url="temperature">Record Temperature</a></li>
+                <li class="employee-main-nav"><a href="#" data-url="waste">Record Waste</a></li>
+                <li class="employee-main-nav"><a href="#" data-url="inspection">Performance Surveys </a></li>
+            </ul>
+
+        </aside>
+
+        <div class="row" style="margin-left: 250px">
+            <div class="row">
+                <div class="col-sm-8 main--title">
+                   Store Assist
+                </div>
+                <div class="col-sm-4">
+                    <div class="row" style="margin-top: 20px">
+                        <div class="col-sm-offset-4 col-sm-2">
+                            <div class="row" style="height: 60px;background-color: #D8D8D8;border-radius: 34px">
+                                <center>
+                                    <i class="fa fa-bell-o fa-2x" aria-hidden="true" style="position: absolute;right: 17px;top: 18px"></i>
+                                </center>
+                            </div>
+                        </div>
+                        <div class="col-sm-6" style="margin-top: 62px">
+                            <div class="acc-info">
+                                <div class="dropdown">
+                                    <button class="btn btn--account dropdown-toggle" id="js-user-name" type="button" data-toggle="dropdown">
+                                        <small id="js-user-role">Admin</small>&nbsp<i class="fa fa-caret-down"></i>
+                                    </button>
+                                    <ul class="dropdown-menu dropdown">
+                                        <li><a href="#" id="logout">Sign Out</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="font-size: 15px;margin-left: 7px">
+                <span style="">Check</span>
+            </div>
+            <hr />
+        </div>
+
+        <div class="row" style="margin-left: 220px">
+
+        </div>
+
+        <script src="/bower_components/jquery/dist/jquery.js"></script>
+        <script src="/bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js"></script>
+        <script src="/bower_components/handlebars/handlebars.js"></script>
+        <script src="/bower_components/moment/moment.js"></script>
+        <script src="/bower_components/moment-range/dist/moment-range.js"></script>
+        <script src="/bower_components/underscore/underscore.js" type="text/javascript"></script>
+        <script type="text/javascript" src="/bower_components/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+        <script src="/src/js/jquerypp.js"></script>
+        <script src="/src/js/interact.js"></script>
+        <script src="/src/js/pnotify.custom.min.js"></script>
+        <script src="/build/js/templates.js"></script>
+        <script src="/src/js/app.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('#js-user-role').text($.cookie('user').role.toUpperCase());
+                $('.aside--logo').find('img').attr('src', 'images/logo.png');
+            });
+            $('#logout').on('click', function(ev) {
+                ev.preventDefault();
+                $.cookie('user', null);
+                document.location.href = '/';
+            });
+        </script>
+</body>
+
+</html>

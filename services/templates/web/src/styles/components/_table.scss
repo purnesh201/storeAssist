@@ -1,0 +1,177 @@
+.card {
+    background-color: white;
+    border-bottom: 4px solid #F8F8F8;
+    font-size: 14px;
+    input {
+        width: 80px;
+    }
+}
+.editcard {
+    background-color: white;
+    border-bottom: 4px solid #F8F8F8;
+    font-size: 14px;
+    display: inline-block;
+    margin: 5px;
+}
+.tab_margin_b {
+  margin-bottom: 30px;
+}
+
+.mytable {
+    margin: 0;
+    white-space: nowrap;
+}
+
+ .adminQuestions >td{
+    margin: 0;
+    white-space: nowrap !important;
+}
+
+.table {
+    margin-bottom: 40px;
+}
+
+.table thead > tr > th {
+    padding-bottom: 30px;
+    padding-left: 20px;
+    border: 0;
+    font-size: 14px;
+}
+
+.table tbody > tr > td {
+    border: 0;
+    padding: 10px 0 10px 20px;
+    vertical-align: middle;
+
+
+}
+.js-products-body > tr > td ,.js-pullover-employee-tbody > tr > td ,.js-productbody > tr > td ,.js-pullover-values > tr > td,.js-buildto-body > tr > td{
+      &:first-child {
+       width: 25% !important;
+      }
+}
+
+
+.table--content {
+    margin-top: 60px;
+
+    table {
+        border: 1px solid #e5e5e5;
+
+        tbody > tr > td {
+            border: 1px;
+            &:first-child {
+                width: 20%;
+            }
+        }
+    }
+
+    thead {
+        background-color: #e5e5e5;
+    }
+}
+.freeze-table>thead:first-child>tr:first-child>th:first-child
+{
+    position: absolute;
+    display: inline-block;
+    background-color: #dddddd;
+    border: 1px solid #aaaaaa;
+    width:100px;
+    height:40%;
+}
+.freeze-table> tbody > tr > td:first-child
+{
+    position: absolute;
+    display: inline-block;
+    width:100px !important;
+}
+.freeze-table>thead:first-child>tr:first-child>th:nth-child(2)
+{
+    padding-left:120px !important;
+}
+.freeze-table> tbody > tr > td:nth-child(2)
+{
+    padding-left:120px !important;
+}
+
+.nav-tabs-scroll {
+    overflow-x: scroll;
+    white-space: nowrap;
+    margin-bottom: 20px;
+}
+
+.nav-tabs > li {
+    display: inline-block;
+    float: none;
+}
+
+
+.accordian-header {
+    height: 20px !important;
+}
+
+.accordion {
+    margin: 0 !important;
+}
+
+
+.scroll_tabs_container div.scroll_tab_inner {
+  li {
+    background-color: #EEEEEE !important;
+    border-top: 0 !important;
+    border-bottom: 0 !important;
+    border-right-color: #aaaaaa !important;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+
+}
+
+.scroll_tabs_theme_light div.scroll_tab_inner li.tab_selected {
+  background-color: #cc0000 !important;
+  color: white !important;
+}
+
+.orderlimit {
+  input {
+    margin-right: 10px;
+    float: left;
+  }
+  p {
+    padding: 6px;
+    color: #aaa;
+  }
+}
+.adm-unit-type {
+  color:red;
+}
+.adm-inspection-details {
+  cursor:pointer;
+  cursor:hand;
+
+}
+.emp-ingredients {
+  width:25%;
+}
+.emp-small td small {
+  color:grey;
+}
+.emp-inspection-details {
+  cursor:pointer;
+  cursor:hand;
+}
+.adm-sett-surveylist {
+  margin-top: 3%;
+}
+.emp-temp td:first-child {
+  width:25%;
+}
+.adm-emailconfig {
+display:block
+}
+.table-select {
+  background-color: #FFD700
+}

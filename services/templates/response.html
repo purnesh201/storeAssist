@@ -1,50 +1,17 @@
 <html>
+  <head>
+    {% if user %}
+    <title>{{ user.nickname }} - microblog</title>
+    {% else %}
+    <title>Welcome to My microblog</title>
+    {% endif %}
+  </head>
+  <body>
+    <h1>Hi, This is a small todo List!</h1>
+    {% for post in tasks %}
+    <div><p>{{ post.task }} to be completed: <b>{{ post.lang }}</b></p></div>
+    {% endfor %}
 
-
-
-<style>
-  body {background-color: powderblue;}
-   h1   {color: blue;}
-
-   .button {
-            padding: 10px 20px;
-            font-size: 15px;
-            text-align: center;
-            cursor: pointer;
-            outline: none;
-            color: #fff;
-            background-color: #4CAF50;
-            border: none;
-            border-radius: 15px;
-            box-shadow: 0 9px #999;
-          }
-
-.button:hover {background-color: #3e8e41}
-
-.button:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-}
-</style>
-<body  bgcolor="#E6E6FA">
-<!-- 	<h1> Hello {{ user }}</h1>  -->
-	<table border="1" height="20%" width="20%" bgcolor="#4CAF50">
-       <!-- <tr><h4>Your age is </h4><td>{{age}}</tr></td> </table>
-       <ul>
-       
-       {% for num in nums %}
-         {% if num % 2 ==0 %}
-             <li> {{ num }}</li>
-          {% endif %}
-       {% endfor %}
-       </ul> ------> -->
-<h3>Login Successful!!!!!</h3>
-<form action="{{ url_for('logout')}}" method="POST">  
-<p><button class="button">Signout</button>
-   </p>
-  </form>
-
-
-</body>
+    <h3>This is the current url : {{ current }}<h3> 
+  </body>
 </html>
